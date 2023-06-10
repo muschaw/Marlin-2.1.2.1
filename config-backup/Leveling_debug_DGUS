@@ -1,0 +1,10 @@
+
+Marlin\src\lcd\extui\dgus\lotmaxx\pages\LEVELING_screen.cpp: In static member function 'static void DGUSScreenHandler::LEVELING_AutoLevelingButtonHandler(DGUS_VP_Variable&, void*)':
+Marlin\src\lcd\extui\dgus\lotmaxx\pages\LEVELING_screen.cpp:63:33: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   63 |   gcode.process_subcommands_now("G29 P1 S0 N");
+      |                                 ^~~~~~~~~~~~~
+Marlin\src\lcd\extui\dgus\lotmaxx\pages\LEVELING_screen.cpp:64:33: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   64 |   gcode.process_subcommands_now("G29 P1 C");
+      |                                 ^~~~~~~~~~
+Marlin\src\lcd\extui\dgus\lotmaxx\pages\MOVE_screen.cpp:52:18: warning: 'EAxisType' defined but not used [-Wunused-variable]
+   52 | static EAXISType EAxisType = E0;

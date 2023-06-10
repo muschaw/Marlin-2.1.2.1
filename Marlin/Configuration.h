@@ -2978,6 +2978,7 @@
   #define USE_MKS_GREEN_UI
 #endif
 
+#define DGUS_LCD_UI_LOTMAXX
 //
 // Touch-screen LCD for Malyan M200/M300 printers
 //

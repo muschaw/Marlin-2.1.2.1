@@ -40,7 +40,7 @@
   #include "../../../feature/powerloss.h"
 #endif
 
-DGUSScreenHandlerClass ScreenHandler;
+DGUSScreenHandler ScreenHandler;
 
 uint16_t DGUSScreenHandler::ConfirmVP;
 
@@ -55,7 +55,7 @@ void (*DGUSScreenHandler::confirm_action_cb)() = nullptr;
 #if ENABLED(SDSUPPORT)
   int16_t DGUSScreenHandler::top_file = 0,
           DGUSScreenHandler::file_to_print = 0;
-  ExtUI::FileList filelist;
+  ExtUI::FileList DGUSScreenHandler::filelist;
 #endif
 
 #if ENABLED(DGUS_FILAMENT_LOADUNLOAD)
@@ -164,7 +164,11 @@ void DGUSScreenHandler::DGUSLCD_PercentageToUint8(DGUS_VP_Variable &var, void *v
 // overwrite the remainings with spaces.// var.size has the display buffer size!
 void DGUSScreenHandler::DGUSLCD_SendStringToDisplay(DGUS_VP_Variable &var) {
   char *tmp = (char*) var.memadr;
+#if ENABLED(DGUS_LCD_UI_LOTMAXX)
+  DGUSLCD_TextDisplay(var.VP, tmp, var.size);
+#else
   dgusdisplay.WriteVariable(var.VP, tmp, var.size, true);
+#endif
 }
 
 // Sends a (flash located) string to the DGUS Display
@@ -172,7 +176,11 @@ void DGUSScreenHandler::DGUSLCD_SendStringToDisplay(DGUS_VP_Variable &var) {
 // overwrite the remainings with spaces.// var.size has the display buffer size!
 void DGUSScreenHandler::DGUSLCD_SendStringToDisplayPGM(DGUS_VP_Variable &var) {
   char *tmp = (char*) var.memadr;
+#if ENABLED(DGUS_LCD_UI_LOTMAXX)
+  DGUSLCD_TextDisplayPGM(var.VP, tmp, var.size);
+#else
   dgusdisplay.WriteVariablePGM(var.VP, tmp, var.size, true);
+#endif
 }
 
 #if HAS_PID_HEATING

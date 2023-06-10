@@ -54,9 +54,11 @@
   #include "fysetc/DGUSScreenHandler.h"
 #elif ENABLED(DGUS_LCD_UI_HIPRECY)
   #include "hiprecy/DGUSScreenHandler.h"
+#elif ENABLED(DGUS_LCD_UI_LOTMAXX)
+  #include "Lotmaxx/DGUSScreenHandler.h"  
 #endif
 
-extern DGUSScreenHandlerClass ScreenHandler;
+extern DGUSScreenHandler ScreenHandler;
 
 // Helper to define a DGUS_VP_Variable for common use-cases.
 #define VPHELPER(VPADR, VPADRVAR, RXFPTR, TXFPTR) { \
