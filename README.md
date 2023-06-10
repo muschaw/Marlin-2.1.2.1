@@ -13,6 +13,7 @@ Lotmaxx Shark V2
 
 This firmware is based on a "clean" 2.1.2.1 [Marlin](https://github.com/MarlinFirmware/)
 
-The pinouts and LCD code came from these two projects:   
+The pinouts and LCD code came from these projects:   
 * https://github.com/EfelerGibi/Marlin-Mod-For-Lotmaxx-Shark-v2 
 * https://github.com/sm3dp/firmware_marlin2.0 
+* https://github.com/spinixguy/sc-10-shark-v2-firmware
