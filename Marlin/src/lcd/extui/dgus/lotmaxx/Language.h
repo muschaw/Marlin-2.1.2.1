@@ -1,7 +1,7 @@
 /*
 *Function:
 *Programed by:Ray_DK@163.com
-*Modified by:Efeler_Gibi
+*Modified by:Muschaw
 *Complete date:
 *Modified by:
 *Modified date:
@@ -19,8 +19,8 @@ extern "C"{
 
 #define COM_PILE_DATE							__DATE__     
 #define COM_PILE_TIME							__TIME__   
-#define SW_VERSION								"SC-10Shark Gibi Mod" 
-#define CO_TD_INFO								"Shenzhen Senma Utrend Technology Co., Ltd & Efeler_Gibi"
+#define SW_VERSION								"SC-10Shark-v2.1.2.1 By Muschaw" 
+#define CO_TD_INFO								"Shenzhen Senma Utrend Technology Co., Ltd"
 
 
 #define	SK_NAME									"SKU-60-BASE"

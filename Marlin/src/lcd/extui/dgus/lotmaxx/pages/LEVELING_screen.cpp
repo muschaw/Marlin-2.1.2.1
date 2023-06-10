@@ -38,8 +38,8 @@
 #include "../../../../../gcode/gcode.h"
 #include "screen_common.h"
 
-constexpr float DEGREE01  = 0.1;
-constexpr float DEGREE005 = 0.05;
+constexpr float DEGREE01  = 0.05;
+constexpr float DEGREE005 = 0.01;
 
 static float OffsetStep = DEGREE01;
 
@@ -60,8 +60,8 @@ void DGUSScreenHandler::LEVELING_AutoLevelingButtonHandler(DGUS_VP_Variable &var
     DGUSLCD_TextDisplay(VP_LEVELING_REMAIN_TEXT, "", 0);
   #endif
   DGUSLCD_TextDisplay(VP_LEVELING_REMAIN_TEXT, "", 0);
-  gcode.process_subcommands_now("G29 P1 S0 N");
-  gcode.process_subcommands_now("G29 P1 C");
+  gcode.process_subcommands_now("G29 P1 T0 V4 S");
+  //gcode.process_subcommands_now("G29 P1 C");
   queue.enqueue_one("M500"); 
   thermalManager.setTargetHotend(hotendtargetold, HID_E0);
   thermalManager.setTargetBed(hotbedtargetold);
@@ -125,7 +125,7 @@ void DGUSScreenHandler::LEVELING_SubButtonHandler(DGUS_VP_Variable &var, void *v
 void DGUSScreenHandler::DGUSLCD_SendLevelingOffsetToDisplay(DGUS_VP_Variable &var)
 {
   char temp[20];
-  String ZoffsetString(*(float *)var.memadr, 1);
+  String ZoffsetString(*(float *)var.memadr, 3);
   sprintf(temp, "Z offset %smm", ZoffsetString.c_str());
   DGUSLCD_TextDisplay(VP_LEVELING_OFFSET_TEXT, temp, strlen(temp));
 }

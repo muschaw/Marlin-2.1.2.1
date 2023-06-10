@@ -1318,7 +1318,7 @@ void DGUSScreenHandler::DIWEN_SetText(void)
 void DGUSScreenHandler::init(){
   uint8_t powerOn[4] = {0x55,0xaa,0x5a,0xa5};
   dgusdisplay.WriteVariable(VP_Reset, powerOn, sizeof(powerOn), false);
-  text_display.language_choice = Chinese;
+  text_display.language_choice = English;
 }
 
 void DGUSScreenHandler::SDCardPrintFinished()
