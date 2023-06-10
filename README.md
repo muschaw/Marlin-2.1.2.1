@@ -1,4 +1,4 @@
-Lotmaxx Shark V2
+Lotmaxx Shark V2 SC-10
 
 
 * Working LCD (Laser still not tested) - use the DWIN_SET from this repo
