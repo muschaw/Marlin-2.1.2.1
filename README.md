@@ -9,3 +9,4 @@ Lotmaxx Shark V2
 * Laser should be working (not tested)
 * Using a second thermistor to check motherboard temps (disable in config or pins if not needed!)
 * Replace M600 with M125 on fillamnet sensort trip ( restore with M108 - twice if heating is required)
+* Linear advance and input shaping enabled
