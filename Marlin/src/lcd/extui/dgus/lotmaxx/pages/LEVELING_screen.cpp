@@ -60,8 +60,8 @@ void DGUSScreenHandler::LEVELING_AutoLevelingButtonHandler(DGUS_VP_Variable &var
     DGUSLCD_TextDisplay(VP_LEVELING_REMAIN_TEXT, "", 0);
   #endif
   DGUSLCD_TextDisplay(VP_LEVELING_REMAIN_TEXT, "", 0);
-  gcode.process_subcommands_now("G29 P1 T0 V4 S");
-  //gcode.process_subcommands_now("G29 P1 C");
+  gcode.process_subcommands_now("M420 S1");
+  gcode.process_subcommands_now("G29 P1 V S");
   queue.enqueue_one("M500"); 
   thermalManager.setTargetHotend(hotendtargetold, HID_E0);
   thermalManager.setTargetBed(hotbedtargetold);
@@ -125,7 +125,7 @@ void DGUSScreenHandler::LEVELING_SubButtonHandler(DGUS_VP_Variable &var, void *v
 void DGUSScreenHandler::DGUSLCD_SendLevelingOffsetToDisplay(DGUS_VP_Variable &var)
 {
   char temp[20];
-  String ZoffsetString(*(float *)var.memadr, 3);
+  String ZoffsetString(*(float *)var.memadr, 2);
   sprintf(temp, "Z offset %smm", ZoffsetString.c_str());
   DGUSLCD_TextDisplay(VP_LEVELING_OFFSET_TEXT, temp, strlen(temp));
 }

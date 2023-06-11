@@ -37,8 +37,8 @@
 #include "../../../../../sd/cardreader.h"
 #include "screen_common.h"
 
-constexpr float DEGREE01 = 0.1;
-constexpr float DEGREE1 = 1.0;
+constexpr float DEGREE01 = 0.01;
+constexpr float DEGREE1 = 0.05;
 
 static float step = DEGREE01;
 
@@ -100,7 +100,7 @@ void DGUSScreenHandler::ZOFFSET_SubButtonHandler(DGUS_VP_Variable &var, void *va
 void DGUSScreenHandler::DGUSLCD_SendZoffsetToDisplay(DGUS_VP_Variable &var)
 {
   char temp[20];
-  String ZoffsetString(*(float *)var.memadr, 3);
+  String ZoffsetString(*(float *)var.memadr, 2);
   sprintf(temp, "Z offset %smm", ZoffsetString.c_str());
   DGUSLCD_TextDisplay(VP_ZOFFSET_TEXT, temp, strlen(temp));
 }
