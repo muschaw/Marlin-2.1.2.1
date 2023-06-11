@@ -8,7 +8,7 @@ Lotmaxx Shark V2 SC-10
     * Zoffset in all menus now moves in 0.05 and 0.01 despite the buttons saying 0.1/1.0 and 0.05/0.01, I can't fix it as I don't have access to the DWIN_SET source code, help anyone ?!
     * Laster mode does not switch on in the screen menus.
 * Laser should be working (not tested)
-* Replace M600 with M125 on fillamnet sensor trip (restore with M108 - twice if heating is required)
+* Replace M600 with G27 on fillamnet sensor trip (M600/M125 crashes with this LCD)
 * Linear advance and input shaping enabled
 * Arc and BEZIER_CURVE_SUPPORT disabled to save on RAM (if these are needed change the ABL-UBL grid to 5 points)
 * Must run M502 & M500 after flashing and reboot (reboot not needed if not using the screen code)
