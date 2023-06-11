@@ -125,7 +125,7 @@ void DGUSScreenHandler::LEVELING_SubButtonHandler(DGUS_VP_Variable &var, void *v
 void DGUSScreenHandler::DGUSLCD_SendLevelingOffsetToDisplay(DGUS_VP_Variable &var)
 {
   char temp[20];
-  String ZoffsetString(*(float *)var.memadr, 3);
+  String ZoffsetString(*(float *)var.memadr, 2);
   sprintf(temp, "Z offset %smm", ZoffsetString.c_str());
   DGUSLCD_TextDisplay(VP_LEVELING_OFFSET_TEXT, temp, strlen(temp));
 }
