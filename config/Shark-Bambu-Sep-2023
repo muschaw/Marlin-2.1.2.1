@@ -1,0 +1,44 @@
+echo:  G21 ; (mm)
+echo:; Temperature Units:
+echo:  M149 C ; Units in Celsius
+echo:; Filament settings (Disabled):
+echo:  M200 S0
+echo:  M200 T0 D1.75
+echo:  M200 T1 D1.75
+echo:; Steps per unit:
+echo:  M92 X80.00 Y80.00 Z400.00 E432.00
+echo:; Max feedrates (units/s):
+echo:  M203 X150.00 Y150.00 Z20.00 E70.00
+echo:; Max Acceleration (units/s2):
+echo:  M201 X2000.00 Y2000.00 Z100.00 E1200.00
+echo:; Acceleration (units/s2) (P<print-accel> R<retract-accel> T<travel-accel>):
+echo:  M204 P2000.00 R2000.00 T2000.00
+echo:; Advanced (B<min_segment_time_us> S<min_feedrate> T<min_travel_feedrate> J<junc_dev>):
+echo:  M205 B20000.00 S0.00 T0.00 J0.10
+echo:; Home offset:
+echo:  M206 X0.00 Y0.00 Z-0.15
+echo:; Unified Bed Leveling:
+echo:  M420 S1 Z10.00 ; Leveling ON
+Unified Bed Leveling System v1.01 active
+echo:Active Mesh Slot 0
+echo:EEPROM can hold 10 meshes.
+echo:; Hotend PID:
+echo:  M301 P22.23 I4.28 D28.90
+echo:; Bed PID:
+echo:  M304 P197.94 I38.66 D675.63
+echo:; Power-loss recovery:
+echo:  M413 S1 ; ON
+echo:; Z-Probe Offset:
+echo:  M851 X20.00 Y0.00 Z-5.11 ; (mm)
+echo:; Input Shaping:
+echo:  M593 X F0.00 D0.00
+echo:  M593 Y F0.00 D0.00
+echo:; Linear Advance:
+echo:  M900 K0.60
+echo:; Filament load/unload:
+echo:  M603 T0 L0.00 U100.00 ; (mm)
+echo:  M603 T1 L0.00 U100.00 ; (mm)
+echo:; Tool-changing:
+echo:  M217 Z2.00
+echo:; Filament runout sensor:
+echo:  M412 S1 ; Sensor ON
