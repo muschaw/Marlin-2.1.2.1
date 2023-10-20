@@ -1694,7 +1694,7 @@
 // @section geometry
 
 // The size of the printable area
-#define X_BED_SIZE 250
+#define X_BED_SIZE 210
 #define Y_BED_SIZE 250
 
 // Travel limits (linear=mm, rotational=°) after homing, corresponding to endstop positions.
@@ -2978,7 +2978,7 @@
   #define USE_MKS_GREEN_UI
 #endif
 
-#define DGUS_LCD_UI_LOTMAXX
+//#define DGUS_LCD_UI_LOTMAXX
 //
 // Touch-screen LCD for Malyan M200/M300 printers
 //
