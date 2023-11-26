@@ -1483,7 +1483,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { -40, -4, -2.35 }
+#define NOZZLE_TO_PROBE_OFFSET { -40, -4, -0.95}
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
@@ -1694,14 +1694,14 @@
 // @section geometry
 
 // The size of the printable area
-#define X_BED_SIZE 250
+#define X_BED_SIZE 237  
 #define Y_BED_SIZE 250
 
 // Travel limits (linear=mm, rotational=°) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
 #define Y_MIN_POS 0
 #define Z_MIN_POS -3
-#define X_MAX_POS 280
+#define X_MAX_POS 256
 #define Y_MAX_POS Y_BED_SIZE
 #define Z_MAX_POS 265
 //#define I_MIN_POS 0
@@ -1985,8 +1985,8 @@
 
   //#define MESH_EDIT_GFX_OVERLAY   // Display a graphics overlay while editing the mesh
 
-  #define MESH_INSET 10             // Set Mesh bounds as an inset region of the bed
-  #define GRID_MAX_POINTS_X 8       // Don't use more than 15 points per axis, implementation limited.
+  #define MESH_INSET 27             // Set Mesh bounds as an inset region of the bed
+  #define GRID_MAX_POINTS_X 6       // Don't use more than 15 points per axis, implementation limited.
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
   #define UBL_HILBERT_CURVE       // Use Hilbert distribution for less travel when probing multiple points
